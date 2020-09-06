@@ -7,7 +7,8 @@ git commit -m '版本描述/操作描述' //提交到本地库
 git status //查看状态
 git log //查看当前版本
 git reflog //查看历史所有操作版本
-git reset --hard 版本号     //设置为某版本（只是本地，还得执行下边的操作才能更新到远程库）
+git reset --hard 版本号     //设置为某版本
+          （只是本地，还得执行下边的操作才能更新到远程库，但得用git push -f origin master命令，此时为旧版本所以要强制提交）
 git remote -v //查看本地仓库和哪些远程库连接着
 git remote add origin（连接名，默认为origin） 远程库的http地址 //本地库和远程库连接
 git remote rm origin（连接名，默认为origin)    //本地库和远程库断开连接
