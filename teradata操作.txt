@@ -1,0 +1,70 @@
+name：root
+password：root
+开teradata服务器：/etc/init.d/tpa start
+查ip：  /sbin/ipconfig
+登陆： bteq
+       logon 192.168.17.128/dbc,dbc；
+注销：logoff
+关机：init 0 
+建库： create database  bmnc_pcodevw as perm=10E8,SPOOL=10E8; 
+建用户：create user app_tfpt_adhoc as  permanent=100000 byte3 password=app_tfpt_adhoc temporary=1000000 bytes spool=1000000bytes;
+建试图：create view bmnc_pcodevw.T99_STAT_LINE_CD as select * from bmnc_pcode.T99_STAT_LINE_CD;
+insert into bmnc_pcode.T99_ADJUST_STATUS values(?,?);
+给权限：grant create table on bmnc_pcode to dbc;
+      grant select  on bmnc_pdata.T20_STD_LINE to dbc;
+select username,databasename,accessright from dbc.allrights where databasename='bmnc_pcode';
+select username,databasename,ct from dbc.allrights where databasename='bmnc_pcode';
+BMNC_PDATAVW.T20_STATION_PHY_RELA_HIS
+
+建表 CREATE MULTISET TABLE BMNC_PDATA.T20_STATION_PHY_RELA_HIS,NO FALLBACK ,
+     NO BEFORE JOURNAL,
+     NO AFTER JOURNAL,
+     CHECKSUM = DEFAULT,
+     DEFAULT MERGEBLOCKRATIO
+     (
+      start_tm TIMESTAMP(0),
+      end_tm TIMESTAMP(0));
+改表：alter  TABLE BMNC_PDATAVW.T20_STATION_PHY_RELA_HIS
+     add Station_ID VARCHAR(30) CHARACTER SET LATIN CASESPECIFIC TITLE '车站编号' NOT NULL;
+删表：drop table bmnc_pcodevw.t99_stat_line_rela_cd;
+bmnc_pdatavw.T20_STD_LINE
+create view bmnc_pdatavw.T20_STD_LINE as select * from bmnc_pdata.T20_STD_LINE;
+bmnc_pdata.T20_STD_LINE.Line_ID
+
+BMNC_PDATAVW.T20_TRANSFER_STATION
+bmnc_pdatavw.TCS_LINE_PTY_RELA_HIS
+
+BMNC_PDATAVW.T10_PARTY
+BMNC_Pcodevw.t99_stat_line_rela_cd
+BMNC_PMARTVW.TCS_LINE_PTY_RELA_HIS.Stat_Line_ID
+
+
+alter  TABLE BMNC_PDATAVW.TCS_LINE_PTY_RELA_HIS
+add Stat_Line_ID VARCHAR(30) NOT NULL;
+
+bmnc_pdatavw.TCS_LINE_PTY_RELA_HIS  b 存在
+BMNC_PMARTVW.b.Stat_Line_ID
+
+BMNC_Pcodevw.t99_stat_line_rela_cd
+
+select  distinct  
+( b. Stat_Line_ID) as line_ID ,a.Pty_Nme,  a.pty_id     
+from (select	  Line_ID,  (select	Pty_Nme   from	BMNC_PDATAVW.T10_PARTY as a  where	a.Pty_ID=b.Pty_ID)    as Pty_Nme ,pty_id     
+   from	bmnc_pdatavw.TCS_LINE_PTY_RELA_HIS as b    
+where	  current_date>=b.Start_Tm   and	current_date<=b.End_Tm) as a ,
+(	select *   from BMNC_Pcodevw.t99_stat_line_rela_cd) as b 
+where a.line_id=b.Std_Line_ID and b.Std_Line_ID not in ('84','85')
+
+
+INSERT	INTO bmnc_pcodevw.t99_stat_line_rela_cd
+(Std_Line_ID)
+VALUES	
+(Std_Line_ID  [VARCHAR(100)])
+
+BMNC_PDATAVW.T20_STATION_PHY_RELA_HIS
+
+select Station_ID as stationId ,phy_STATION_ID as tranStationId from	BMNC_PDATAVW.T20_STATION_PHY_RELA_HIS  where start_tm<=CURRENT_TIMESTAMP and end_tm>=CURRENT_TIMESTAMP]; SQL state [HY000]; error code [5628]; [Teradata Database] [TeraJDBC 14.00.00.21] [Error 5628] [SQLState HY000] Column phy_STATION_ID not found in BMNC_PDATAVW.T20_STATION_PHY_RELA_HIS.; nested exception is com.teradata.jdbc.jdbc_4.util.JDBCException: [Teradata Database] [TeraJDBC 14.00.00.21] [Error 5628] [SQLState HY000] Column phy_STATION_ID not found in BMNC_PDATAVW.T20_STATION_PHY_RELA_HIS.
+
+ BMNC_PDATA.T20_STATION_PHY_RELA_HIS
+
+

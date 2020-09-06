@@ -1,0 +1,68 @@
+目录处理命令ls：ls （不包括隐藏文件）
+              ls -a  所有文件（可看隐藏文件）
+			  ls -l   显示文件详细信息（l-long）
+			  ls -lh   显示文件的大小单位(h-human)
+			  ls -l /etc   显示当前目录下所有文件的详细信息
+			  ls -ld /etc  只显示当前目录本身的详细信息
+			原意：list
+			命令所在路径：/bin/ls
+目录处理命令mkdir：mkdir /xx/xx/xx  创建目录
+                   mkdir -p /xx/xx/xx 递归创建目录（某个上级目录没创建会创建）
+				   mkdir /xx/x   /bb/b 创建多个目录
+目录处理命令cd： cd /xx/xx/xx  切换到指定目录
+                 cd .. 回到上一级目录
+目录处理命令pwd：pwd 显示当前目录路径
+				原意：print working directory
+				l命令所在路径：/bin/pwd
+目录处理命令rm：rm/rmdir  删除空目录（目录下没有文件）
+				rm /xx/xx/文件名  删除某文件（会询问是否删除）
+				rm -f /xx/xx/文件名  删除某文件（强制删除，不会提示）
+				rm -r /xx/xx     删除目录（会询问是否删除，如果该目录下有文件，也会一个一个询问）
+				rm -rf /xx/xx    强制删除目录（不会询问）
+				rm -rf /      删除所有文件（删库跑路）
+				原意：remove empty directories
+				命令所在路径：bin/rmdir
+目录处理命令cp：复制文件或目录  
+				原意：copy
+				命令所在路径：/bin/cp
+				cp /xx/xx/文件名  /bb   把文件复制到bb目录下
+				cp -r /xx/xx  /bb  复制目录
+目录处理命令mv: 剪切
+                mv 源目录  目标目录 （可以改名）
+				在同目录下换名字相当于只改名
+文件处理命令touch：创建文件
+                    touch /xx/xx/文件名    
+文件权限：-rwxr--r--
+          第一个：-二进制文件 d目录 l软链接文件
+		  2-4：所有者user
+		  5-7：所属组group
+		  8-10：其他人others
+		  r读 w写 x执行
+		  
+关机命令：poweroff
+          shutdown -h 1  一分钟后关机
+系统目录文件颜色：
+				蓝色----目录
+				浅蓝色---链接文件
+				绿色----可执行文件
+				红色----压缩文件
+				白色----一般文件
+				黄色----设备文件
+切换用户命令：切换到root用户： su root  会提示需要输入密码
+              切换到test用户： su test  
+			  切换回原用户： exit
+切换到系统目录：cd /
+
+切换到用户目录：当前用户目录 cd ~
+                root用户  cd /root
+                其他用户例如test  cd  /home/test
+查询主机名：cd /etc/sysconfig
+		   cat network				
+通过rpm命令安装软件：
+					1.连接光盘：vm软件的设置dvd里导入，并设置连接
+					2.将光盘挂载到/mnt目录下： 创建挂载点  mkdir /mnt/cdrom
+									挂载光盘：mount /dev/sr0 /mnt/cdrom
+									此时所有的rpm软件包在/mnt/cdrom/Packages下
+					3.使用rpm安装软件
+rpm命令的使用总结：
+

@@ -1,0 +1,36 @@
+create view bmnc_pcodevw.T99_STAT_INDEX_CD as select * from bmnc_pcode.T99_STAT_INDEX_CD;
+create view bmnc_pcodevw.T99_STAT_STATION_CD as select * from bmnc_pcode.T99_STAT_STATION_CD;
+create view bmnc_pcodevw.T99_RIDE_MNT_SEGMENT_CD as select * from bmnc_pcode.T99_RIDE_MNT_SEGMENT_CD;
+create view bmnc_pcodevw.T99_RIDE_SCNT_SEGMENT_CD as select * from bmnc_pcode.T99_RIDE_SCNT_SEGMENT_CD;
+create view bmnc_pcodevw.T99_RIDE_KM_SEGMENT_CD as select * from bmnc_pcode.T99_RIDE_KM_SEGMENT_CD;
+create view bmnc_pcodevw.T99_AMT_SEGMENT_CD as select * from bmnc_pcode.T99_AMT_SEGMENT_CD;
+create view bmnc_pcodevw.T99_TRIP_DIRECTION_CD as select * from bmnc_pcode.T99_TRIP_DIRECTION_CD;
+create view bmnc_pcodevw.T99_DECTIME_STAT_INDEX_CD as select * from bmnc_pcode.T99_DECTIME_STAT_INDEX_CD;
+create view bmnc_pcodevw.T99_SCORE_DISCOUNT_CD as select * from bmnc_pcode.T99_SCORE_DISCOUNT_CD;
+create view bmnc_pcodevw.T99_PERIOD_DISCOUNT_CD as select * from bmnc_pcode.T99_PERIOD_DISCOUNT_CD;
+create view bmnc_pcodevw.T99_DISCOUNT_TYPE_CD as select * from bmnc_pcode.T99_DISCOUNT_TYPE_CD;
+create view bmnc_pcodevw.T99_FINAL_DISCOUNT_CD as select * from bmnc_pcode.T99_FINAL_DISCOUNT_CD;
+create view bmnc_pcodevw.T99_TRAIN_PARAMETER_HIS as select * from bmnc_pcode.T99_TRAIN_PARAMETER_HIS;
+create view bmnc_pcodevw.T99_WEATHER_CD as select * from bmnc_pcode.T99_WEATHER_CD;
+create view bmnc_pcodevw.T99_WIND_DRCT_CD as select * from bmnc_pcode.T99_WIND_DRCT_CD;
+create view bmnc_pcodevw.T99_WIND_POWER_CD as select * from bmnc_pcode.T99_WIND_POWER_CD;
+create view bmnc_pdatavw.T50_PRODUCT as select * from bmnc_pdata.T50_PRODUCT;
+create view bmnc_pdatavw.T20_STD_LINE as select * from bmnc_pdata.T20_STD_LINE;
+create view bmnc_pdatavw.T20_TRANSFER_STATION as select * from bmnc_pdata.T20_TRANSFER_STATION;
+create view bmnc_pdatavw.TA0_WEATHER as select * from bmnc_pdata.TA0_WEATHER;
+create view bmnc_pdatavw.T10_PARTY as select * from bmnc_pdata.T10_PARTY ;
+create view bmnc_pdatavw.TCS_LINE_PTY_RELA_HIS as select * from bmnc_pdata.TCS_LINE_PTY_RELA_HIS;
+create view bmnc_pdatavw.T20_SECTION as select * from bmnc_pdata.T20_SECTION;
+create view bmnc_pdatavw.T20_STATION as select * from bmnc_pdata.T20_STATION;
+create view bmnc_pdatavw.T20_STATION_LINE_RELA_HIS as select * from bmnc_pdata.T20_STATION_LINE_RELA_HIS;
+create view bmnc_pdatavw.T20_STATION_BASE_INFO_HIS as select * from bmnc_pdata.T20_STATION_BASE_INFO_HIS;
+create view bmnc_pdatavw.T20_STD_STATION as select * from bmnc_pdata.T20_STD_STATION;
+create view bmnc_pdatavw.T20_LINE_BASE_INFO_HIS as select * from bmnc_pdata.T20_LINE_BASE_INFO_HIS;
+create view bmnc_pdatavw.TA0_EVENT_ADDR as select * from bmnc_pdata.TA0_EVENT_ADDR;
+create view bmnc_pdatavw.TA0_EVENT_INFL as select * from bmnc_pdata.TA0_EVENT_INFL;
+create view bmnc_pdatavw.TA0_EVENT as select * from bmnc_pdata.TA0_EVENT;
+alter  TABLE BMNC_PDATA.T20_STATION_PHY_RELA_HIS
+     add Station_ID VARCHAR(30) CHARACTER SET LATIN CASESPECIFIC TITLE '车站编号' NOT NULL;
+alter  TABLE BMNC_PDATA.T20_STATION_PHY_RELA_HIS
+     add phy_Station_ID VARCHAR(30);
+create view BMNC_PDATAVW.T20_STATION_PHY_RELA_HIS as select * from BMNC_PDATA.T20_STATION_PHY_RELA_HIS;

@@ -1,0 +1,3 @@
+unix及类unix系统的换行：LF(Line Feed)换行 \n    切换到下一行
+mac系统的换行：CR(Carriage Return)回车 \r       切换到当前行的开头
+windows系统的换行：CRLF(Line Feed Carriage Return) \r\n 回车换行
