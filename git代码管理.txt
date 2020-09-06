@@ -1,6 +1,6 @@
 git config --list
 git config -l //看git配置
-git init  //初始化
+git init  //初始化，将此目录下的文件初始化为一个本地库，会生成.git隐藏文件
 git add .
 git add -A //提交到暂存区
 git commit -m '版本描述/操作描述' //提交到本地库
