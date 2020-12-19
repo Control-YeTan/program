@@ -4,3 +4,4 @@
       GRANT dba TO testportal
 监听程序打开关闭：lsnrctl start/stop
 开oracle的configuration assistant：netca
+十大
