@@ -1,0 +1,6 @@
+建立表空间：create tablespace testportal datafile'C:\app\Administrator\oradata\testportal\testportal.dbf' SIZE 500m extent management LOCAL;
+创建新用户并使用表空间： CREATE USER testportal IDENTIFIED BY testportal DEFAULT tablespace testportal;
+授权：GRANT CONNECT,resource TO testportal
+      GRANT dba TO testportal
+监听程序打开关闭：lsnrctl start/stop
+开oracle的configuration assistant：netca

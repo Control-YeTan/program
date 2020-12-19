@@ -1,0 +1,2 @@
+ORM的全称是Object Relational Mapping，即对象-关系映射。ORM是一种规范，它是将简单的java对象(POJO)和数据库记录进行映射，
+使数据表中的记录和POJO一一对应。  常见的ORM框架有hibernate，mybatis

@@ -4,7 +4,7 @@
    （2）创建完成后系统会在当前目录下建一个yt_spyter文件夹（其下目录还有一个叫yt_spyter的文件夹，就是这样，莫慌）
    （3）此时切换进yt_spyter目录下，执行命令：scrapy genspider image_spider baidu.com  创建了一个叫image_spider的爬虫，其爬取网页baidu.com
         的数据     	 
-3.pipline.py做数据的保存到本地，持久化操作
+3.pipeline.py做数据的保存到本地，持久化操作
   items.py定义爬取数据类型
   具体的爬虫spyter.py定义request的url，接收response并解压（parse）
 4.scrapy check命令检查当前项目有无语法错误

@@ -1,0 +1,87 @@
+{
+"apply": [
+	{
+		"Aid" : 13,
+		"Atid" : 20001,
+		"Areason" : "申请1",
+		"Adate" : "2020-02-16",
+		"Atimestart" : "06:00:00",
+		"Atimeover" : "08:00:00",
+		"Aprocess" : 1,
+		"Aresult" : 1,
+		"Arid" : 101,
+		"Arbuilding" : "A"
+	},
+	{
+		"Aid" : 14,
+		"Atid" : 20001,
+		"Areason" : "申请2",
+		"Adate" : "2020-02-16",
+		"Atimestart" : "08:00:00",
+		"Atimeover" : "09:35:00",
+		"Aprocess" : 1,
+		"Aresult" : 0,
+		"Arid" : 102,
+		"Arbuilding" : "A"
+	},
+	{
+		"Aid" : 15,
+		"Atid" : 20001,
+		"Areason" : "234232324",
+		"Adate" : "2020-02-16",
+		"Atimestart" : "08:00:00",
+		"Atimeover" : "09:35:00",
+		"Aprocess" : 1,
+		"Aresult" : 1,
+		"Arid" : 102,
+		"Arbuilding" : "A"
+	},
+	{
+		"Aid" : 16,
+		"Atid" : 20001,
+		"Areason" : "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
+		"Adate" : "2020-02-16",
+		"Atimestart" : "20:00:00",
+		"Atimeover" : "21:00:00",
+		"Aprocess" : 1,
+		"Aresult" : 1,
+		"Arid" : 308,
+		"Arbuilding" : "A"
+	},
+	{
+		"Aid" : 17,
+		"Atid" : 20001,
+		"Areason" : "fdsfsdfsdgdsdg",
+		"Adate" : "2020-02-16",
+		"Atimestart" : "08:00:00",
+		"Atimeover" : "09:35:00",
+		"Aprocess" : 1,
+		"Aresult" : 1,
+		"Arid" : 102,
+		"Arbuilding" : "A"
+	},
+	{
+		"Aid" : 18,
+		"Atid" : 20001,
+		"Areason" : "sddcsfdvs",
+		"Adate" : "2020-02-18",
+		"Atimestart" : "08:00:00",
+		"Atimeover" : "09:35:00",
+		"Aprocess" : 1,
+		"Aresult" : 0,
+		"Arid" : 218,
+		"Arbuilding" : "A"
+	},
+	{
+		"Aid" : 19,
+		"Atid" : 20001,
+		"Areason" : "圆心",
+		"Adate" : "2020-02-16",
+		"Atimestart" : "20:00:00",
+		"Atimeover" : "21:00:00",
+		"Aprocess" : 1,
+		"Aresult" : 1,
+		"Arid" : 308,
+		"Arbuilding" : "A"
+	}
+]}

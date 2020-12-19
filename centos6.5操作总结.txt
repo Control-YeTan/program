@@ -1,9 +1,16 @@
+硬链接命令ln：ln 原文件 新文件  （会创建一个新文件，新文件会指向原文件，原文件改变，新文件也会改变；原，新文件的id号相同）
+                             （但是一个文件被删除，另一个文件不会被删且内容还在）
+软链接命令ln -s:ln -s 原文件 新文件 （原，新文件的id号不同）
+                                    （删除原文件，新文件的链接会丢失；恢复了原文件，链接又会回来）
+查看文件属性stat: stat /xx/xx/文件名   （文件属性又叫元数据）
+               
 目录处理命令ls：ls （不包括隐藏文件）
               ls -a  所有文件（可看隐藏文件）
 			  ls -l   显示文件详细信息（l-long）
 			  ls -lh   显示文件的大小单位(h-human)
 			  ls -l /etc   显示当前目录下所有文件的详细信息
 			  ls -ld /etc  只显示当前目录本身的详细信息
+                           ls -i   显示文件的id号，每个文件在系统中都有一个独一无二的id号码/索引
 			原意：list
 			命令所在路径：/bin/ls
 目录处理命令mkdir：mkdir /xx/xx/xx  创建目录
@@ -11,6 +18,7 @@
 				   mkdir /xx/x   /bb/b 创建多个目录
 目录处理命令cd： cd /xx/xx/xx  切换到指定目录
                  cd .. 回到上一级目录
+                 cd - 回到上一次访问的目录
 目录处理命令pwd：pwd 显示当前目录路径
 				原意：print working directory
 				l命令所在路径：/bin/pwd
@@ -28,16 +36,19 @@
 				cp /xx/xx/文件名  /bb   把文件复制到bb目录下
 				cp -r /xx/xx  /bb  复制目录
 目录处理命令mv: 剪切
-                mv 源目录  目标目录 （可以改名）
+                mv -r 源目录  目标目录 （可以改名）
 				在同目录下换名字相当于只改名
 文件处理命令touch：创建文件
                     touch /xx/xx/文件名    
 文件权限：-rwxr--r--
-          第一个：-二进制文件 d目录 l软链接文件
+          第一个：-二进制文件 d目录 l软链接文件  c(字符流:有规则)/b(字节流)设备文件
 		  2-4：所有者user
 		  5-7：所属组group
 		  8-10：其他人others
 		  r读 w写 x执行
+生成ssh密钥：ssh-keygen -t rsa
+分发ssh公钥的命令：ssh—copy-id 192.168.21.129
+分发文件命令：scp /xx/xx/文件名  目的ip:/bb/bb/文件名1  （可以修改文件名）
 		  
 关机命令：poweroff
           shutdown -h 1  一分钟后关机
@@ -57,7 +68,12 @@
                 root用户  cd /root
                 其他用户例如test  cd  /home/test
 查询主机名：cd /etc/sysconfig
-		   cat network				
+		   cat network
+查询端口情况：netstat -ntlp
+具体端口使用情况：netstat -ntlp | grep 80	
+查看每个目录所用空间大小  du -sh ./*
+内部shell命令	用help 命令名 来学习
+外部shell命令   用man 命令名 来学习		
 通过rpm命令安装软件：
 					1.连接光盘：vm软件的设置dvd里导入，并设置连接
 					2.将光盘挂载到/mnt目录下： 创建挂载点  mkdir /mnt/cdrom
