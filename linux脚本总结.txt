@@ -1,0 +1,22 @@
+定义变量：
+your_name="mozhiyan"
+输出变量：
+echo $your_name
+echo ${your_name}
+卸载变量：
+unset your_name
+今天的前一天:
+mydate=`date -d "-1 day" +%Y%m%d`
+
+设置日期脚本：
+if [ -n "$1" ] ;then
+        do_date=$1
+else
+        do_date=`date -d "-1 day" +%Y%m%d`
+fi
+do_month=`date -d $do_date +%Y%m`
+
+
+命令替换：
+1、反引号:`命令`
+2、$()：$(命令)

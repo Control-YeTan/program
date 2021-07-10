@@ -1,0 +1,2 @@
+本机进入d:\\redis目录下
+然后redis-server.exe redis.windows.conf即可

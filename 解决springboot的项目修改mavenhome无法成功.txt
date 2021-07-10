@@ -1,0 +1,1 @@
+删除项目初始化后的生成的.mvn mvnw mvnw.cmd help.md .gitignore等文件后再修改mavenhome，然后reload maven即可
