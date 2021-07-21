@@ -81,4 +81,6 @@
 									此时所有的rpm软件包在/mnt/cdrom/Packages下
 					3.使用rpm安装软件
 rpm命令的使用总结：
+一个主机向另一个主机发文件：scp 文件路径/文件名 root@ip:/目录
+一个主机向另一个主机法某文件夹下全部文件：scp -r /root/cdh包/ root@ip:/root/    cdh包下所有文件到root目录下 
 
